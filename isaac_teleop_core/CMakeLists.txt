@@ -30,10 +30,18 @@ ament_python_install_package(
   PACKAGE_DIR "${TELEOP_ROS2_RETARGETERS_DIR}"
 )
 
-# The `isaacteleop` Python package is provided by the pip shim dependency at
-# runtime; this package installs the ROS 2 entrypoint and its local helpers.
-install(PROGRAMS
-  "${TELEOP_ROS2_NODE_SCRIPT}"
+# Install local Python helper modules alongside the ROS 2 entrypoint.
+file(GLOB TELEOP_ROS2_PYTHON_FILES
+  "${TELEOP_ROS2_PYTHON_DIR}/*.py"
+)
+
+install(
+  FILES ${TELEOP_ROS2_PYTHON_FILES}
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(
+  PROGRAMS "${TELEOP_ROS2_NODE_SCRIPT}"
   DESTINATION lib/${PROJECT_NAME}
   RENAME teleop_ros2_node
 )

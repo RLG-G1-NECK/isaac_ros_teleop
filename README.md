@@ -24,6 +24,10 @@ Refer to the [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/reposi
 
 ---
 
+## Usage
+Simply run the launchfile and CloudXR should start (no need to open in a new terminal window). Then go to the cloudxr client website on the headset and connect!
+
+
 ## Packages
 
 * [`isaac_ros_teleop`](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_teleop/isaac_ros_teleop/index.html)

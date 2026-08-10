@@ -2,3 +2,5 @@
 	path = isaac_teleop_core/IsaacTeleop
 	url = https://github.com/NVIDIA/IsaacTeleop
 	branch = release/1.3.x
+[submodule "isaac_teleop_core/IsaaTeleop"]
+	branch = main
