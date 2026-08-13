@@ -89,6 +89,11 @@ def generate_launch_description() -> LaunchDescription:
             description='TF child frame name for the left wrist',
         ),
         DeclareLaunchArgument(
+            name='head_frame',
+            default_value='head',
+            description='TF child frame name for the head',
+        ),
+        DeclareLaunchArgument(
             name='left_finger_joint_names',
             default_value=_G1_LEFT_FINGER_JOINT_NAMES,
             description=(

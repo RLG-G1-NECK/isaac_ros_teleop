@@ -46,4 +46,18 @@ install(
   RENAME teleop_ros2_node
 )
 
+# Install camera_viz too
+set(CAMERA_VIZ_DIR "${ISAACTELEOP_SRC}/examples/camera_viz")
+if(NOT EXISTS "${CAMERA_VIZ_DIR}")
+  message(FATAL_ERROR
+    "Missing camera_viz source: ${CAMERA_VIZ_DIR}\n"
+    "Ensure the IsaacTeleop submodule is initialized."
+  )
+endif()
+
+install(
+  DIRECTORY "${CAMERA_VIZ_DIR}/"
+  DESTINATION "share/${PROJECT_NAME}/camera_viz"
+)
+
 ament_package()
