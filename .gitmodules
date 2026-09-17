@@ -1,4 +1,4 @@
 [submodule "isaac_teleop_core/IsaacTeleop"]
 	path = isaac_teleop_core/IsaacTeleop
-	url = git@github.com:TWIST2-C1/IsaacTeleop.git
+	url = git@github.com:RLG-G1-NECK/IsaacTeleop.git
 	branch = release/1.3.x
